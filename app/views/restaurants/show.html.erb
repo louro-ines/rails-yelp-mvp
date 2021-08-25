@@ -4,10 +4,10 @@
 <p>Phone number: <%= @restaurant.phone_number %></p>
 <p>Category: <%= @restaurant.category %></p>
 <h3>Reviews</h3>
-<p><%= link_to '+ Add Review', new_restaurant_review_path(@restaurant) %></p>
+<p><%= link_to '+ Add Review', new_restaurant_review_path(@restaurant), class: 'btn btn-primary' %></p>
 <ul class="list-group">
   <% @restaurant.reviews.each do |review| %>
-    <li class="list-group-item"><%= review.content %></li>
+    <li class="list-group-item"><%= "#{review.rating}* | #{review.content}" %></li>
   <% end %>
 </ul>
-<p><%= link_to '← Back', restaurants_path %></p>
+<p><%= link_to '← Back', restaurants_path, class: 'btn btn-primary' %></p>
