@@ -4,7 +4,5 @@ Rails.application.routes.draw do
     resources :reviews, only: %i[new create]
   end
 
-  # root to: '/restaurants'
+  root 'restaurants#index'
 end
-
-# root to: 'pages#home'
